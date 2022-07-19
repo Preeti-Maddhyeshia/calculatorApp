@@ -8,6 +8,7 @@ public class BasicCalculator {
 
 	public static void main(String[] args)
 	{
+		getPercentage(obtained,total);
 		// stores two numbers
 		double num1, num2;
 
@@ -71,5 +72,18 @@ public class BasicCalculator {
 		// print the final result
 		System.out.println(num1 + " " + op + " " + num2
 						+ " = " + o);
+	public double getPercentage(int obtained, int total){
+							int total, score; 
+       float percentage;
+       Scanner inputNumScanner = new Scanner(System.in);
+       
+       System.out.println("Enter the total, or max, score: ");       
+       total = inputNumScanner.nextInt();
+       
+       System.out.println("Enter the score obtained: ");
+       score = inputNumScanner.nextInt();
+       
+       percentage = (score * 100/ total);
+	   return percentage;
 	}
 }
